@@ -130,6 +130,7 @@ onMounted(() => {
           <div class="hero-card card-2">
             <div class="card-icon">
               <Code :size="24" />
+              
             </div>
             <div class="card-content">
               <h4>Learn & Share</h4>
