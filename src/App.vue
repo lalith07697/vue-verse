@@ -1,6 +1,5 @@
 <script setup >
 import Header from './components/Header.vue'
-import Home from './components/Home.vue'
 import logo from './assets/favicon.jpg'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
@@ -9,7 +8,7 @@ const isLoading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false
-  }, 1000)
+  }, 400)
 })
 </script>
 
@@ -34,10 +33,11 @@ onMounted(() => {
       </div>
     </div>
 
-    <div v-else class="animate-fadeIn opacity-0">
-      <Header />
-      <Home />
-      <div>HI</div>
+    <div v-else>
+      <div class="animate-fadeIn opacity-0">
+        <Header />
+        <RouterView class="mt-20"/>
+      </div>
     </div>
   </div>
 </template>
