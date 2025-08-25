@@ -1,8 +1,10 @@
 <script setup >
-import Header from './components/Header.vue'
+import Header from './components/HeaderView.vue'
 import logo from './assets/favicon.jpg'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
+import Home from './components/Home.vue'
+import AboutView from './components/AboutView.vue'
 const isLoading = ref(true)
 
 onMounted(() => {
@@ -36,7 +38,10 @@ onMounted(() => {
     <div v-else>
       <div class="animate-fadeIn opacity-0">
         <Header />
-        <RouterView class="mt-20"/>
+        <div class="mt-20 flex flex-col w-screen items-center">
+          <Home id="home"/>
+          <AboutView id="about"/>
+        </div>
       </div>
     </div>
   </div>
@@ -54,5 +59,6 @@ onMounted(() => {
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-in-out forwards;
 }
+
 </style>
 

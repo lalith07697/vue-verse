@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Menu, X } from 'lucide-vue-next'
 import logo from '../assets/favicon.jpg'
@@ -9,7 +9,7 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
 }
 
-const scrollToSection = (sectionId: string) => {
+const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })
