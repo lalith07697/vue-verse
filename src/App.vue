@@ -31,11 +31,10 @@ onMounted(() => {
     </div>
 
     <div v-else class="animate-fadeIn opacity-0">
-      <Header />
+      <Header/>
       <Home />
     </div>
   </div>
- 
 </template>
 
 <style>

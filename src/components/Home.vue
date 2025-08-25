@@ -8,6 +8,13 @@
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(79,192,141,0.1)_0%,transparent_50%),radial-gradient(circle_at_75%_75%,rgba(255,107,107,0.1)_0%,transparent_50%)]"
       ></div>
+
+      <!-- Floating icons -->
+      <div class="absolute inset-0">
+        <div class="absolute top-[20%] left-[10%] opacity-60 animate-float-slow">
+          <img src="@/assets/favicon.jpg" alt="My Logo" class="w-12 h-12" />
+        </div>
+      </div>
     </div>
 
     <!-- Content -->
