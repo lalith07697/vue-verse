@@ -35,7 +35,7 @@ onMounted(() => {
       <Home />
     </div>
   </div>
- <p>HELLo kojja</p>
+ 
 </template>
 
 <style>
