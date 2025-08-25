@@ -39,7 +39,7 @@ onMounted(() => {
       <Home />
     </div>
   </div>
-  <div>Hello</div>
+  <div>Hello world</div>
 </template>
 
 <style>
