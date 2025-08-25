@@ -1,4 +1,4 @@
-<script setup >
+<script setup>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import logo from './assets/favicon.jpg'
@@ -22,11 +22,7 @@ onMounted(() => {
     >
       <div class="text-center">
         <div class="inline-block animate-pulse">
-          <img
-            :src="logo"
-            alt="App Logo"
-            class="w-20 h-20 rounded-full shadow-lg"
-          />
+          <img :src="logo" alt="App Logo" class="w-20 h-20 rounded-full shadow-lg" />
         </div>
         <!-- <h2 class="text-green-500 mt-4 font-bold text-lg">
           Loading VueVerse...
@@ -40,7 +36,7 @@ onMounted(() => {
       <div>HI</div>
     </div>
   </div>
-  <div>Hello world</div>
+ <p>HELLo kojja</p>
 </template>
 
 <style>
@@ -56,4 +52,3 @@ onMounted(() => {
   animation: fadeIn 0.8s ease-in-out forwards;
 }
 </style>
-
