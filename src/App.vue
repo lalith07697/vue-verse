@@ -1,6 +1,8 @@
 <script setup>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
+import Events from './components/Events.vue'
+import Contact from './components/Contact.vue'
 import logo from './assets/favicon.jpg'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
@@ -31,8 +33,10 @@ onMounted(() => {
     </div>
 
     <div v-else class="animate-fadeIn opacity-0">
-      <Header/>
+      <Header />
       <Home />
+      <Events />
+      <Contact />
     </div>
   </div>
 </template>
