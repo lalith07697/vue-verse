@@ -8,8 +8,8 @@ const isMobileMenuOpen = ref(false)
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
 }
-// const scrollToSection = (sectionId: string) => {
-const scrollToSection = () => {
+const scrollToSection = (sectionId) => {
+  // const scrollToSection = () => {
   const element = document.getElementById(sectionId)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })
@@ -39,11 +39,7 @@ onUnmounted(() => {
       <nav class="flex items-center justify-between">
         <!-- Brand logo -->
         <div class="flex items-center gap-2 cursor-pointer">
-          <img
-            :src="logo"
-            alt="App Logo"
-            class="w-10 h-10 rounded-full shadow-md"
-          />
+          <img :src="logo" alt="App Logo" class="w-10 h-10 rounded-full shadow-md" />
           <span class="text-2xl font-extrabold text-green-600">VueVerse</span>
         </div>
         <!-- Desktop Nav -->
@@ -74,9 +70,9 @@ onUnmounted(() => {
             >Partners</a
           >
           <a
-            @click="scrollToSection('videos')"
+            @click="scrollToSection('contact')"
             class="relative text-gray-700 font-medium cursor-pointer hover:text-green-600 after:block after:w-0 after:h-0.5 after:bg-green-600 after:transition-all hover:after:w-full"
-            >Videos</a
+            >Contact</a
           >
         </div>
 
@@ -132,7 +128,7 @@ onUnmounted(() => {
           >Partners</a
         >
         <a
-          @click="scrollToSection('videos')"
+          @click="scrollToSection('contact')"
           class="text-gray-700 font-medium cursor-pointer hover:text-green-600"
           >Videos</a
         >
