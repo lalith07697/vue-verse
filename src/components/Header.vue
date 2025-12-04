@@ -37,12 +37,10 @@ onUnmounted(() => {
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between">
-        <!-- Brand logo -->
         <div class="flex items-center gap-2 cursor-pointer">
           <img :src="logo" alt="App Logo" class="w-10 h-10 rounded-full shadow-md" />
           <span class="text-2xl font-extrabold text-green-600">VueVerse</span>
         </div>
-        <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-8">
           <a
             @click="scrollToSection('home')"
@@ -76,7 +74,6 @@ onUnmounted(() => {
           >
         </div>
 
-        <!-- Actions -->
         <div class="flex items-center gap-4">
           <a
             href="#"
@@ -92,7 +89,7 @@ onUnmounted(() => {
       </nav>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mob (screen)-->
     <div
       class="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 transition-all duration-300"
       :class="
@@ -130,7 +127,7 @@ onUnmounted(() => {
         <a
           @click="scrollToSection('contact')"
           class="text-gray-700 font-medium cursor-pointer hover:text-green-600"
-          >Videos</a
+          >Contact</a
         >
         <a
           href="#"

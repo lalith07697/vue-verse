@@ -3,6 +3,7 @@ import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import Events from './components/Events.vue'
 import Contact from './components/Contact.vue'
+import About from './components/About.vue'
 import logo from './assets/favicon.jpg'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
@@ -17,7 +18,6 @@ onMounted(() => {
 
 <template>
   <div class="min-h-screen">
-    <!-- Loader of the main page-->
     <div
       v-if="isLoading"
       class="fixed inset-0 w-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center z-[9999]"
@@ -35,6 +35,7 @@ onMounted(() => {
     <div v-else class="animate-fadeIn opacity-0">
       <Header />
       <Home />
+      <About />
       <Events />
       <Contact />
     </div>

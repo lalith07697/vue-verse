@@ -60,7 +60,7 @@ const modelClosed = () => {
 </script>
 
 <template>
-  <section id="events" class="py-24 bg-gradient-to-br from-white/80 via-emerald-100/10 to-white/80">
+  <section id="events" class="bg-gradient-to-br from-white/80 via-emerald-100/10 to-white/80">
     <div class="container mx-auto px-6 lg:px-12">
       <!-- Section Header -->
       <div class="text-center mb-16 animate-fadeInUp">
