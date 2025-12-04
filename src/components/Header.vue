@@ -16,6 +16,14 @@ const scrollToSection = (sectionId) => {
   }
   isMobileMenuOpen.value = false
 }
+const isPopupOpen = ref(false)
+const openPopup = () => {
+  isPopupOpen.value = true
+}
+
+const closePopup = () => {
+  isPopupOpen.value = false
+}
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
@@ -76,8 +84,8 @@ onUnmounted(() => {
 
         <div class="flex items-center gap-4">
           <a
-            href="#"
-            class="hidden md:inline-block px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+            @click="openPopup"
+            class="hidden md:inline-block px-4 py-2 cursor-pointer bg-green-600 text-white rounded-lg font-medium transition-all duration-300 ease-out hover:bg-green-700 hover:scale-105 hover:shadow-lg active:scale-95"
           >
             Join Us
           </a>
@@ -130,12 +138,36 @@ onUnmounted(() => {
           >Contact</a
         >
         <a
-          href="#"
-          class="mt-4 inline-block px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+          @click="openPopup"
+          class="hidden md:inline-block px-4 py-2 cursor-pointer bg-green-600 text-white rounded-lg font-medium transition-all duration-300 ease-out hover:bg-green-700 hover:scale-105 hover:shadow-lg active:scale-95"
         >
           Join Us
         </a>
       </div>
     </div>
   </header>
+  <transition
+    enter-active-class="transition duration-300 ease-out"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
+    leave-active-class="transition duration-200 ease-in"
+    leave-from-class="opacity-100"
+    leave-to-class="opacity-0"
+  >
+    <div
+      v-if="isPopupOpen"
+      class="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-md z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-2xl text-center w-80">
+        <h2 class="text-xl font-bold mb-2">SORRY</h2>
+        <p class="text-gray-600 mb-4">We are working on it! Stay tuned</p>
+        <button
+          @click="closePopup"
+          class="px-4 py-2 cursor-pointer bg-green-600 text-white rounded transition-all duration-200 hover:bg-green-700 hover:scale-105 active:scale-95"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </transition>
 </template>
